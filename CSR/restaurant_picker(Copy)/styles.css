@@ -1,0 +1,8 @@
+
+.choice_list img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    margin-right: 10px; /* Add some spacing between images */
+  }
+  

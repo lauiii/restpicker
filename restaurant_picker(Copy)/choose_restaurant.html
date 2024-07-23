@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Restaurant Picker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
+  <link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+  <link rel="stylesheet" href="custom.css" />
+  <link rel="stylesheet" href="restaurant-page/theme1.css" />
+  <link rel="stylesheet" href="btn-design.css" />
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/jquery.mobile-1.0.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const selectedTown = localStorage.getItem("town");
+      if (selectedTown) {
+        $(".town-item").hide(); // Hide all town items by default
+        $(".town-item." + selectedTown).show(); // Show items matching the selected town
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div data-role="page" id="choisir_restau" data-add-back-btn="true" data-theme="a">
+    <div data-role="header">
+      <h1>Restaurant Picker</h1>
+    </div>
+    <div data-role="content">
+      <div class="choice_list">
+        <h1>Please choose a restaurant.</h1>
+
+        <ul data-role="listview" data-inset="true">
+          <!-- Burger places-->
+          <li>
+            <a href="restaurant-page/Jollibeepage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Castillo-burger">
+              <img src="jobee.jpg" alt="Jollibee" />
+              <h2>Jollibee</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="restaurant-page/minutepage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Andres-burger">
+              <img src="images/minuteb.jpg" alt="Minute" />
+              <h2>Minute Burger</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+          <li>
+            <a href="restaurant-page/krcornerpage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Espiritu-burger">
+              <img src="krcorner1.jpg" alt="" />
+              <h2>Kr Corner</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="restaurant-page/fiabpage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Barreda-burger">
+              <img src="FiB.jpg" alt="" />
+              <h2>Food in a Box</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="restaurant-page/fiabpage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Castillo-burger">
+              <img src="FiB.jpg" alt="" />
+              <h2>Food in a Box</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <!-- Pizza places-->
+
+          <li>
+            <a href="restaurant-page/Bianospage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Abarca-pizza">
+              <img src="bianos.jpg" alt="" />
+              <h2>Bianos Pizzaderia</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="restaurant-page/krcornerpage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Espiritu-pizza">
+              <img src="krcorner1.jpg" alt="" />
+              <h2>Kr corner</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <!-- Chicken places-->
+          <li>
+            <a href="restaurant-page/Jollibeepage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Castillo-chicken">
+              <img src="jobee.jpg" alt="" />
+              <h2>Jollibee</h2>
+              <p class=" classement four">4 stars</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="restaurant-page/fiabpage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Barreda-chicken">
+              <img src="FiB.jpg" alt="" />
+              <h2>Food in a box</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+          <li>
+            <a href="restaurant-page/kuyadongspage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Abarca-chicken">
+              <img src="kuyad.jpg" alt="" />
+              <h2>Kuya Dongs</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <!-- Samgyupsal places-->
+          <li>
+            <a href="restaurant-page/eatdirepage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item stpaul-samgyup">
+              <img src="eatdire.jpg" alt="" />
+              <h2>Eat sa dire</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="restaurant-page/ramzpage.html" data-ajax="false" data-transition="slidedown"
+              class="town-item Andres-samgyup">
+              <img src="ramz1 (1).jpg" alt="" />
+              <h2>Ramz Square</h2>
+              <p class="classement four">4 stars</p>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+    <footer style="bottom: 0; position: fixed; width: 100%; z-index: 1000;">
+			<div data-role="collapsible" data-collapsed="true" data-mini="true" data-theme="a" data-content-theme="a">
+				<h3>About us</h3>
+				<p style="font-style:italic; font-weight:200;">
+					At Pick and Eat, we aim to simplify your dining experience. Feel free to share your preferences, and
+					we'll find the perfect spot for you. From cozy cafes to stylish restaurants, we're here to make your
+					dining experience unforgettable.
+					<br>Created by <br />CSR,<br />passionate foodies dedicated to making your dining experience
+					unforgettable.
+				</p>
+			</div>
+			<div data-role="collapsible" data-collapsed="true" data-mini="true" data-theme="a" data-content-theme="a">
+				<h3>Contact Us :</h3>
+				<p
+					style="position: absolute;text-align: center; justify-content: center; align-items: center; font-style:italic; font-weight:200;">
+				<div style="display: flex; justify-content: center; align-items: center; ">
+					<img id="fb" src="fbicon.png" alt="" style="max-width:70px !important; height:auto;"
+						data-icon="true">
+					<img src="igicon.png" alt="" style="max-width:40px !important; height:auto;">
+				</div>
+			</div>
+		</footer>
+  </div>
+</body>
+
+</html>

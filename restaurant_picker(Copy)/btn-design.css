@@ -1,0 +1,22 @@
+.ui-btn {
+  background-color: rgba(223, 138, 138, 0.5) !important;
+  color: white !important;
+}
+
+.ui-btn-inner {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.ui-btn-text {
+  color: white !important;
+}
+
+.ui-btn::before {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.ui-collapsible-content {
+  max-height: 100% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}

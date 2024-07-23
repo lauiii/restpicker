@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Restaurant Picker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../jquery.mobile.structure-1.0.1.css" />
+	<link rel="apple-touch-icon" href="../images/launch_icon_57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="../images/launch_icon_72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="../images/launch_icon_114.png" />
+	<link rel="stylesheet" href="theme1.css" />
+	<link rel="stylesheet" href="../custom.css" />
+	<link rel="stylesheet" href="respage.css" />
+	<script src="../js/jquery-1.7.1.min.js"></script>
+	<script src="../js/jquery.mobile-1.0.1.min.js"></script>
+</head>
+
+<body>
+	<div id="restau" data-role="page" data-add-back-btn="true" data-theme="a">
+
+		<div data-role="header">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;"> Jollibee</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="ui-grid-a" id="restau_infos">
+				<div class="ui-block-a">
+					<h1> Jollibee</h1>
+					<p><strong>A fast food chain in the center of Mangagoy</strong></p>
+					<p> Heres the link of our menu: </p>
+					<ul>
+						<li><a href="https://www.jollibee.com.ph/menu/" style="text-decoration: none;">View the menu</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ui-block-b">
+					<p><img src="../jabee.jpg" alt="jeannette photo" /></p>
+					<p><a href="https://www.jollibee.com.ph/" rel="external" data-role="button"> See our website</a></p>
+				</div>
+			</div><!-- /grid-a -->
+			<hr />
+		</div><!-- /grid-a -->
+		<div data-role="collapsible" data-mini="true">
+			<h3>Locate us</h3>
+			<div>
+				<p><iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.175960292238!2d126.35021557500929!3d8.185022591846423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fdbb4aca7c3f3f%3A0x9d7540169d8ca36!2sJollibee%20Bislig!5e0!3m2!1sen!2sph!4v1718290271674!5m2!1sen!2sph"
+						width="100%" height="20%" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+				<p style="font-size: 0.8em; font-family: Arial, Helvetica, sans-serif;">P-4, Castillo Village, Jollibee
+					Bislig, Surigao del Sur</p>
+
+			</div>
+		</div>
+		<hr />
+		<div id="notation">
+			<form>
+				<label for="select-choice-0" class="select">
+					<h2> User rating </h2>
+				</label>
+				<select name="note_utilisateur" id="note_utilisateur" data-native-menu="false" data-theme="c">
+					<option value="one" class="one"> Not good at all </option>
+					<option value="two" class="two">Average </option>
+					<option value="three" class="three">Pretty good </option>
+					<option value="four" class="four"> Excellent </option>
+				</select>
+			</form>
+
+		</div>
+		<footer style="bottom: 0; position: fixed; width: 100%; z-index: 1000;">
+
+
+			<div data-role="collapsible" data-collapsed="true" data-mini="true" data-theme="a" data-content-theme="a">
+				<h3>About us</h3>
+				<p style="font-style:italic; font-weight:200;">
+					At Pick and Eat, we aim to simplify your dining experience. Feel free to share your preferences, and
+					we'll find the perfect spot for you. From cozy cafes to stylish restaurants, we're here to make your
+					dining experience unforgettable.
+					<br>Created by <br />CSR,<br />passionate foodies dedicated to making your dining experience
+					unforgettable.
+				</p>
+			</div>
+
+			<div data-role="collapsible" data-collapsed="true" data-mini="true" data-theme="a" data-content-theme="a">
+				<h3>Contact Us :</h3>
+				<p
+					style="position: absolute;text-align: center; justify-content: center; align-items: center; font-style:italic; font-weight:200;">
+				<div style="display: flex; justify-content: center; align-items: center; ">
+					<img id="fb" src="fbicon.png" alt="" style="max-width:70px !important; height:auto;"
+						data-icon="true">
+					<img src="igicon.png" alt="" style="max-width:40px !important; height:auto;">
+				</div>
+
+
+			</div>
+		</footer>
+		<script type="text/javascript">
+			$('#restau').live('pageinit', function (event) {
+				var SelectedOptionClass = $('option:selected').attr('class');
+				$('div.ui-select').addClass(SelectedOptionClass);
+
+				$('#note_utilisateur').live('change', function () {
+					$('div.ui-select').removeClass(SelectedOptionClass);
+
+					SelectedOptionClass = $('option:selected').attr('class');
+					$('div.ui-select').addClass(SelectedOptionClass);
+
+				});
+
+
+			});
+
+
+
+			$('#restau').live('pageinit', function (event) {
+				$('#restau [data-role=collapsible] a').click(function () {
+					$(this).closest('[data-role=collapsible]').find('p').toggle();
+				});
+			});
+		</script>
+	</div>
+
+
+	</div><!-- /page -->
+
+
+</body>
+
+</html>
